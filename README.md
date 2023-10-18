@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Functional Requirements Document (FRD) for School Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+The School Management System (SMS) is a robust web application designed to automate various administrative and academic tasks within a school. This system will utilize React for the client-side interface, Node.js for server-side logic, and MongoDB for database management.
 
-In the project directory, you can run:
+## Users and Roles
 
-### `npm start`
+### 1. Admin
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Description**: Admins have the highest level of access and control over the application. They are the owners of the system.
+- **Capabilities**:
+  - **Authentication and Authorization**: Admins can log in securely and manage user roles and permissions.
+  - **School Management**: Admins can create, edit, and delete schools, and manage system settings and configurations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. School Admin
 
-### `npm test`
+- **Description**: School Admins oversee the management of a specific school, handling tasks related to teachers, students, and financials.
+- **Capabilities**:
+  - **User Management**: Create, edit, and delete teacher and student accounts.
+  - **Financial Transactions**: Manage financial transactions, including fees collection and expense tracking.
+  - **Reports**: Generate financial and performance reports.
+  - **Academic Promotions**: Promote students based on performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Teachers
 
-### `npm run build`
+#### a. Class Teacher
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Description**: Class Teachers are responsible for a specific class and handle attendance and related tasks.
+- **Capabilities**:
+  - **Attendance Management**: Mark attendance for their assigned class.
+  - **View Attendance Reports**: Access attendance reports for their class.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### b. Subject Teacher
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Description**: Subject Teachers are responsible for specific subjects and may teach multiple classes.
+- **Capabilities**:
+  - **Lesson Planning**: Create lesson notes for assigned subjects.
+  - **Assignment Management**: Create and manage weekly assignments for their subjects.
+  - **Exams and Tests**: Create tests and exams for their subjects.
+  - **View Reports**: Access reports related to their subjects.
 
-### `npm run eject`
+### 4. Students
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Description**: Students are enrolled in specific classes and participate in various academic activities.
+- **Capabilities**:
+  - **Personal Information**: View their personal information.
+  - **Assignment Submission**: Access and submit assignments.
+  - **Attendance Records**: View their attendance records.
+  - **View Exam Results**: Access exam and test results.
+  - **Promotion Status**: Receive promotions based on performance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Parents
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Description**: Parents are linked to one or more students and have access to their children's academic information.
+- **Capabilities**:
+  - **View Report Cards**: Access report cards of their children.
+  - **Communication**: Communicate with teachers through a messaging system.
+  - **Raise Concerns**: Raise concerns or complaints.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Core Functionalities
 
-## Learn More
+### 1. User Management
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Description**: The system should facilitate the creation, modification, and deletion of user accounts. It should also manage authentication and authorization.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. School Management
 
-### Code Splitting
+- **Description**: Admins and School Admins should be able to manage schools, including adding new schools, editing school details, and deleting schools if necessary.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. Financial Management
 
-### Analyzing the Bundle Size
+- **Description**: School Admins should be able to manage financial transactions, including fees collection and expense tracking. They should also be able to generate financial reports.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4. Attendance Management
 
-### Making a Progressive Web App
+- **Description**: Class Teachers should be able to mark attendance for their assigned classes. Students and parents should be able to view attendance records.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 5. Academic Activities
 
-### Advanced Configuration
+- **Description**: Subject Teachers should be able to create lesson notes, weekly assignments, and tests/exams. Students should be able to access and submit assignments, view test/exam results, and receive promotions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 6. Parent-Student Communication
 
-### Deployment
+- **Description**: Parents should be able to communicate with teachers, view report cards, and raise concerns or complaints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 7. Exam Management
 
-### `npm run build` fails to minify
+- **Description**: Subject Teachers should be able to create, schedule, and manage final exams and tests. Students should be able to view their exam schedules and results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+
+The School Management System encompasses a comprehensive range of functionalities to efficiently manage educational institutions. By catering to the specific needs of each user type, the system aims to enhance communication, streamline administrative tasks, and improve the overall academic experience for all stakeholders involved.
